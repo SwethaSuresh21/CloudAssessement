@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SKYS FOODS</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('./foodtruck.png'); 
+    background-repeat: no-repeat;
+   background-size: cover;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      animation: fadeInDown 1s ease forwards;
+      opacity: 0;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #d94f4f;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #f7bfbf;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #6a3b3b;
+      font-weight: 600;
+    }
+
+    /* Info Box */
+    .info-box {
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      padding: 20px 30px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+      max-width: 700px;
+      animation: fadeInUp 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    .info-box p {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    .info-box a {
+      color: #d94f4f;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .info-box a:hover {
+      color: #6a3b3b;
+    }
+
+    /* Food Grid */
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      width: 100%;
+      max-width: 900px;
+      animation: fadeInUp 2s ease forwards;
+      opacity: 0;
+    }
+
+    .food-item {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(217, 79, 79, 0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .food-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(217, 79, 79, 0.6);
+    }
+
+    .food-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: filter 0.4s ease;
+    }
+
+    .food-item:hover .food-image {
+      filter: brightness(85%);
+    }
+
+    .food-content {
+      padding: 15px 20px;
+    }
+
+    .food-content h3 {
+      color: #d94f4f;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    .food-content p {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: #444;
+    }
+
+    .offer {
+      color: #e63946;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-top: 8px;
+      text-align: right;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #6a3b3b;
+      animation: fadeInUp 2.5s ease forwards;
+      opacity: 0;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SKYS FOODS</h1>
+    <p>Your favorite place for tasty meals and treats!</p>
+  </header>
+
+  <section class="info-box">
+    <p><strong>Location:</strong> NO:37, ACT nagar,Tiruchirappalli</p>
+    <p><strong>Mobile:</strong> +1 7305375404</p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/SKYS FOODS" target="_blank">@SKYS FOODS</a></p>
+    <p><strong>Offer:</strong> Get 20% off on your first order! Use code <em>YUMMY20</em></p>
+  </section>
+
+  <section class="food-grid">
+
+    <article class="food-item">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=80" alt="Cheeseburger" class="food-image" />
+      <div class="food-content">
+        <h3>BEEF FOOD</h3>
+        <p>A JUICY BEEF BATTY WITH MELTED CHEESE FRESH LETUCE WITH TOMATO SAUCE.</p>
+        <p class="offer">Special Offer: Free fries!</p>
+      </div>
+    </article>
+
+    <article class="food-item">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80" alt="Veggie Pizza" class="food-image" />
+      <div class="food-content">
+        <h3>VEGGIE PIZZA </h3>
+        <p>LOADED WITH FRESH VEGETABLES, MOZARELLA CHEESE WITH TOMATO SAUCE.</p>
+        <p class="offer">Buy 1 Get 1 Half Off</p>
+      </div>
+    </article> 
+    
+  
+      <article class="food-item">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80" alt="Chicken Shawarma" />
+        <div class="food-content">
+          <h3>CHICKEN BURGER</h3>
+          <p>Rich, moist BURGER WITH CHICKEN .</p>
+          <p class="offer">Free drink with every slice</p>
+        </div>
+      </article>
+  
+    </section>
+  <footer>
+    &copy; 2025 SKYS FOODS. All rights reserved.
+  </footer>
+
+</body>
+</html>
